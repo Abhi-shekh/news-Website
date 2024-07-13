@@ -8,12 +8,13 @@ const cookieParser = require('cookie-parser');
 // const User = require('./model/user');
 
 // Dotenv
-dotenv.config({path: './config.env'});
+require("dotenv").config();
 const port = process.env.PORT;
 
 // Mongoose
 require('./db/connect');
 app.use(express.json());
+console.log("db called successfully")
 
 app.use(cookieParser());
 
